@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+    <!-- Cabecera -->
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'core/img/intro.jpg' %}" alt="">
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Te encantara nuestro servicio</span>
+                        <span class="section-heading-lower">Déjate sorprender</span>
+                    </h2>
+
+                    <p>En nuestra clínica veterinaria, sabemos lo importante que es tu mascota para ti, por eso
+                        ofrecemos un servicio integral para su cuidado y bienestar.</p>
+                    <div class="intro-button mx-auto">
+                        <a class="btn btn-primary btn-xl" href="store.html">Visítanos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje -->
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Compromiso total</span>
+                            <span class="section-heading-lower">Garantizado</span>
+                        </h2>
+                        <p class="mb-0">En nuestra clínica veterinaria, ofrecemos un servicio garantizado de alta
+                            calidad para el cuidado y bienestar de tus mascotas. Si no estás satisfecho con nuestros
+                            servicios, haremos todo lo posible para corregir cualquier problema. Si aún así no estás
+                            satisfecho, te ofrecemos una garantía de devolución de dinero. Confía en nuestro equipo de
+                            profesionales altamente capacitados y amantes de los animales para proporcionar a tus
+                            mascotas el mejor cuidado posible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
