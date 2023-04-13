@@ -1,0 +1,5 @@
+Esto es lo minimo que se necesita tener instalado para que la app funcione
+
+Django>=4.0.2
+django-ckeditor==6.2.0
+Pillow==9.0.1
