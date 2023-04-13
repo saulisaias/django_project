@@ -105,13 +105,13 @@
             {#            <a href="sample.html" class="link">Política de privacidad</a> ·#}
             {#            <a href="sample.html" class="link">Aviso legal</a> ·#}
             {#            <a href="sample.html" class="link">Cookies</a>#}
-{#            {% load pages_extras %}#}
-{#            {% get_page_list as page_list %}#}
-{#            {% for page in page_list %}#}
-{#                {{ page.title }}#}
-{#                <a href="{% url 'page' page.id %}" class="link">{{ page.title }}</a>#}
+            {% load pages_extras %}
+            {% get_page_list as page_list %}
+            {% for page in page_list %}
+                <a href="{% url 'page' page.id page.tittle|slugify %}" class="link">
+                    {{ page.tittle }}</a>
 {#                {% if not forloop.last %}·{% endif %}#}
-{#            {% endfor %}#}
+            {% endfor %}
         </p>
         <p class="m-0 mbt1">&copy; Veterinaria DeyDol</p>
     </div>
