@@ -30,8 +30,15 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     # Path product
     path('product/', include('products.urls')),
+    # Path de register
+    path('signup/', include('login.urls')),
+    # Path de login
+    path('signin/', include('login2.urls')),
+    # Path de logout
+    path('logout/', include('logout.urls')),
     # Path admin
     path('admin/', admin.site.urls),
+
 ]
 
 if settings.DEBUG:

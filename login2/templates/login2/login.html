@@ -1,0 +1,31 @@
+<link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Muestra{% endblock %}
+
+{% block content %}
+
+    <!--Login-->
+    <section class="page-section">
+        <div class="container" style="margin-left: 35%; margin-right: 35%;color: white">
+            <h1>Login</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+{#                {{ login_form }}#}
+                Username
+                {{ login_form.username }}
+                <br/>
+                Password
+                {{ login_form.password }}
+                <br/>
+
+                <button class="btn btn-primary" type="submit">Login</button>
+            </form>
+            <p class="text-center">Don't have an account? <a href="{% url 'signup' %}">Create an account</a>.</p>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,53 @@
+<link href="../../static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Muestra{% endblock %}
+
+
+{% block content %}
+    <section class="page-section">
+        <div class="container" style="margin-left: 35%; margin-right: 35%">
+            <h2 style="margin-left: 19%; margin-right: 55%;">
+                <strong style="color: white">SignUp</strong>
+            </h2>
+            <h2 style="margin-left: 19%; margin-right: 55%; color: white">
+                <br/>
+
+            </h2>
+
+            <form method="POST" actione="." class="login-form spacer" id="signup-form">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'core/img/username.png' %}" alt="">
+                    {{ form.username }}
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'core/img/envelope.png' %}" alt="">
+                    {{ form.email }}
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'core/img/key.png' %}" alt="">
+                    {{ form.password1 }}
+                </div>
+                <div class="input-group">
+                    <img class="icon input-icon" src="{% static 'core/img/key.png' %}" alt="">
+                    {{ form.password2 }}
+                </div>
+
+                <input type="submit" class="submit" value="SignUp">
+                <p class="text-center">Already have an account? <a href="{% url 'signin' %}">Sing In</a>.</p>
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+
+
+{% endblock %}
