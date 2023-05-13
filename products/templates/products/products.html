@@ -21,7 +21,15 @@
                     <div class="product-item-description d-flex ml-auto">
                         <div class="bg-faded p-5 rounded">
                             <p class="mb-0">{{ product.content }}</p>
-                            <p class="mb-0">$ {{ product.price }}</p>
+                            <br/>
+                            <div>
+                                <strong>Precio de:</strong>
+                                <span class="mb-0">$ {{ product.price }}</span>
+                            </div>
+                            <a href="{% url 'home' %}">
+                                <input type="submit" class="btn btn-primary btn-block py-2" value="Mas informacion" >
+                            </a>
+
                         </div>
                     </div>
 

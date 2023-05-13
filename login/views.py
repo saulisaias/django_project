@@ -11,7 +11,7 @@ def register_request(response):
         if form.is_valid():
             form.save()
 
-        return redirect("/product/")
+        return redirect("/signin/")
     else:
         form = NewUserForm()
 

@@ -6,14 +6,50 @@
 
 
 {% block content %}
-    <div class="container py-5" style="color: white">
-        <h1>Register</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form }}
-            <button class="btn btn-primary" type="submit">Register</button>
-        </form>
-        <p class="text-center">If you already have an account, <a class="nav-link text-uppercase text-expanded" href="{% url 'signin' %}">login</a> instead.</p>
+    <br/>
+    <div class="container text-center"
+         style="color: white; border-radius: 25px;background: #301810;padding: 20px; width: 800px;height: 450px;">
+
+        <div class="container text-center" style="color: white; border-radius: 25px;background: #e6a756;">
+            <h1>Crear Cuenta</h1>
+        </div>
+        <br/>
+        <div class="container text-center">
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <div><strong>Nombre</strong></div>
+                    <img src="{% static 'core/img/username.png' %}" alt="" width="20" height="20">
+                    {{ form.username }}
+                </div>
+                <div>
+                    <div><strong>Email</strong></div>
+                    <img src="{% static 'core/img/envelope.png' %}" alt="" width="20" height="20">
+                    {{ form.email }}
+                </div>
+                <div>
+                    <div><strong>Contraseña</strong></div>
+                    <img src="{% static 'core/img/key.png' %}" alt="" width="20" height="20">
+                    {{ form.password1 }}
+                </div>
+                <div>
+                    <div><strong>Confirmar Contraseña</strong></div>
+                    <img src="{% static 'core/img/key.png' %}" alt="" width="20" height="20">
+                    {{ form.password2 }}
+                </div>
+
+                <br/><br/>
+                <button class="btn btn-primary" type="submit">Registrarse</button>
+
+            </form>
+            <div>
+                <p>¿Ya estas registrado? Inicia sesion <a href="{% url 'signin' %}">aqui</a>.</p>
+
+            </div>
+        </div>
+
+
     </div>
+    <br/>
 
 {% endblock %}
